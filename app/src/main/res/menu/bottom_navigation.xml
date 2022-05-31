@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/bottom_action_nav"
+        android:icon="@drawable/ic_baseline_notes_24"
+        android:title="@string/my_notes" />
+
+    <item
+        android:id="@+id/bottom_action_info"
+        android:icon="@drawable/ic_baseline_image_search_24"
+        android:title="@string/info" />
+
+    <item
+        android:id="@+id/bottom_city_list"
+        android:icon="@drawable/ic_baseline_location_city_24"
+        android:title="@string/city_list" />
+
+</menu>
+
