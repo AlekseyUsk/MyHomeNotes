@@ -29,17 +29,17 @@ public class InMemoryNotesRepository implements NotesRepository {
 
     @Override
     public ArrayList<Notes> getAll() {
-        ArrayList<Notes> note = new ArrayList<>();
+        ArrayList<Notes> data = new ArrayList<>();
 
-        note.add(new Notes(UUID.randomUUID().toString(), "Title 1", "Message 1", new Date()));//new Date() - дата (время)
-        note.add(new Notes(UUID.randomUUID().toString(), "Title 2", "Message 2", new Date()));
-        note.add(new Notes(UUID.randomUUID().toString(), "Title 3", "Message 3", new Date()));
-        note.add(new Notes(UUID.randomUUID().toString(), "Title 4", "Message 4", new Date()));
-        note.add(new Notes(UUID.randomUUID().toString(), "Title 5", "Message 5", new Date()));
-        note.add(new Notes(UUID.randomUUID().toString(), "Title 6", "Message 6", new Date()));
-        note.add(new Notes(UUID.randomUUID().toString(), "Title 7", "Message 7", new Date()));
+        data.add(new Notes(UUID.randomUUID().toString(), "Title 1", "Message 1", new Date()));//new Date() - дата (время)
+        data.add(new Notes(UUID.randomUUID().toString(), "Title 2", "Message 2", new Date()));
+        data.add(new Notes(UUID.randomUUID().toString(), "Title 3", "Message 3", new Date()));
+        data.add(new Notes(UUID.randomUUID().toString(), "Title 4", "Message 4", new Date()));
+        data.add(new Notes(UUID.randomUUID().toString(), "Title 5", "Message 5", new Date()));
+        data.add(new Notes(UUID.randomUUID().toString(), "Title 6", "Message 6", new Date()));
+        data.add(new Notes(UUID.randomUUID().toString(), "Title 7", "Message 7", new Date()));
 
-        return note;
+        return data;
     }
 
     @Override

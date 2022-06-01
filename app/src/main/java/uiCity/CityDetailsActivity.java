@@ -1,15 +1,18 @@
 package uiCity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+
 import com.hfad.myhomenotes.R;
 
 import domainCity.City;
 
 public class CityDetailsActivity extends AppCompatActivity {
+
     // todo --> тут я через intent передаю в активити город
     private static final String EXTRA_CITY = "EXTRA_CITY";
 
@@ -37,7 +40,7 @@ public class CityDetailsActivity extends AppCompatActivity {
 
             getSupportFragmentManager()
                     .beginTransaction()
-                    .replace(R.id.container_activity_city_details, cityDetailsFragment)
+                    .replace(R.id.container_activity_city_details, cityDetailsFragment)//? подчеркнуто крассным недобавляется фрагмент в контейнер активити
                     .commit();
         }
     }
