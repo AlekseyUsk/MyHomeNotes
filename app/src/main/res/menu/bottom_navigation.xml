@@ -7,10 +7,6 @@
         android:icon="@drawable/ic_baseline_notes_24"
         android:title="@string/my_notes" />
 
-    <item
-        android:id="@+id/bottom_action_info"
-        android:icon="@drawable/ic_baseline_image_search_24"
-        android:title="@string/info" />
 
     <item
         android:id="@+id/bottom_city_list"

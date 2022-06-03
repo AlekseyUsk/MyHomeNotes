@@ -63,3 +63,37 @@ public class CitiesListFragment extends Fragment {
         }
     }
 }
+//<com.google.android.material.appbar.AppBarLayout
+//        android:layout_width="match_parent"
+//        android:layout_height="wrap_content">
+//
+//<androidx.appcompat.widget.Toolbar
+//        android:layout_width="match_parent"
+//        android:layout_height="wrap_content"
+//        app:title="@string/notes_bottom_list">
+//
+//</androidx.appcompat.widget.Toolbar>
+//
+//</com.google.android.material.appbar.AppBarLayout>
+//
+//<androidx.recyclerview.widget.RecyclerView
+//        android:id="@+id/notes_list_recyclerView"
+//        android:layout_width="match_parent"
+//        android:layout_height="wrap_content"
+//        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
+//
+//<ProgressBar
+//        android:id="@+id/progressBar"
+//                android:layout_width="wrap_content"
+//                android:layout_height="wrap_content"
+//                android:layout_gravity="center"
+//                android:visibility="gone" />
+//
+//<com.google.android.material.floatingactionbutton.FloatingActionButton
+//        android:id="@+id/floating_add_btn"
+//        android:layout_width="wrap_content"
+//        android:layout_height="wrap_content"
+//        android:layout_gravity="end|bottom"
+//        android:layout_margin="60dp"
+//        android:src="@drawable/ic_baseline_add_24"
+//        android:backgroundTint="@color/white"/>

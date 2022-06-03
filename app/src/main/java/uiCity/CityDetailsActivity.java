@@ -40,7 +40,7 @@ public class CityDetailsActivity extends AppCompatActivity {
 
             getSupportFragmentManager()
                     .beginTransaction()
-                    .replace(R.id.container_activity_city_details, cityDetailsFragment)//? подчеркнуто крассным недобавляется фрагмент в контейнер активити
+                    //.replace(R.id.container_activity_city_details, cityDetailsFragment)//? подчеркнуто крассным недобавляется фрагмент в контейнер активити
                     .commit();
         }
     }

@@ -4,12 +4,23 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.hfad.myhomenotes.R;
 
-public class NuvBottomFragment extends Fragment {
+import java.util.List;
+
+import domainCity.City;
+import domainCity.InMemoryCityRepository;
+import uiCity.CityDetailsActivity;
+
+public class NotesBottomFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

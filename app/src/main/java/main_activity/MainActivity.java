@@ -10,11 +10,11 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.hfad.myhomenotes.R;
 
-import ui.NotesListFragment;
-import ui.NuvBottomFragment;
+import ui.Notes_List;
 import uiCity.CitiesListFragment;
 
 public class MainActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,16 +29,10 @@ public class MainActivity extends AppCompatActivity {
                 switch (item.getItemId()) {
                     case R.id.bottom_action_nav:
                         getSupportFragmentManager()
-                                .beginTransaction().replace(R.id.container_activity, new NuvBottomFragment())
+                                .beginTransaction().replace(R.id.container_activity, new Notes_List())
                                 .commit();
                         return true;
 
-                    case R.id.bottom_action_info:
-                        getSupportFragmentManager()
-                                .beginTransaction().replace(R.id.container_activity, new NotesListFragment()) // ? - new NotesListFragment почему то подчеркивается красным
-                                .commit();
-
-                        return true;
                     case R.id.bottom_city_list:
                         getSupportFragmentManager()
                                 .beginTransaction().replace(R.id.container_activity, new CitiesListFragment())
