@@ -13,5 +13,10 @@
         android:icon="@drawable/ic_baseline_location_city_24"
         android:title="@string/city_list" />
 
+    <item
+        android:id="@+id/bottom_action_recycler"
+        android:icon="@drawable/ic_baseline_notes_24"
+        android:title="@string/recycler" />
+
 </menu>
 

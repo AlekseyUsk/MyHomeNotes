@@ -1,10 +1,11 @@
 package domain;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public interface NotesRepository {
 
-List<Notes> getAll(); // получение заметок
+ArrayList<Notes> getAll(); // получение заметок
 
 void add(Notes notes); //добавление
 

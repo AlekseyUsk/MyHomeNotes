@@ -10,6 +10,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.hfad.myhomenotes.R;
 
+import noteRecyclerViewList.NotesRecyclerView;
 import ui.Notes_List;
 import uiCity.CitiesListFragment;
 
@@ -37,7 +38,13 @@ public class MainActivity extends AppCompatActivity {
                         getSupportFragmentManager()
                                 .beginTransaction().replace(R.id.container_activity, new CitiesListFragment())
                                 .commit();
+                        return true;
 
+                    case R.id.bottom_action_recycler:
+                        getSupportFragmentManager()
+                                .beginTransaction().replace(R.id.container_activity, new NotesRecyclerView())
+                                .commit();
+                        return true;
 
                 }
 

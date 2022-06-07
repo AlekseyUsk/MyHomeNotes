@@ -1,6 +1,9 @@
 package domain;
 
 import android.content.Context;
+import android.widget.TextView;
+
+import com.hfad.myhomenotes.R;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -38,6 +41,11 @@ public class InMemoryNotesRepository implements NotesRepository {
         data.add(new Notes(UUID.randomUUID().toString(), "Title 5", "Message 5", new Date()));
         data.add(new Notes(UUID.randomUUID().toString(), "Title 6", "Message 6", new Date()));
         data.add(new Notes(UUID.randomUUID().toString(), "Title 7", "Message 7", new Date()));
+
+        for (int i = 0; i < 100; i++) {
+            data.add(new Notes(UUID.randomUUID().toString(), "Title ", "Message ", new Date()));
+
+        }
 
         return data;
     }

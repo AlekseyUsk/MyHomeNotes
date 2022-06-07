@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.hfad.myhomenotes.R;
 
@@ -43,6 +44,13 @@ public class Notes_List extends Fragment {
         for (Notes note : notes) {
 
             View itemView = getLayoutInflater().inflate(R.layout.item_notes, container, false);
+
+            itemView.findViewById(R.id.card_view).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(requireContext(), note.getTitle(), Toast.LENGTH_SHORT).show();
+                }
+            });
 
             TextView title = itemView.findViewById(R.id.title_note);
             TextView message = itemView.findViewById(R.id.message_note);
