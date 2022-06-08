@@ -21,12 +21,28 @@ import domain.Notes;
 
 public class Adapter extends RecyclerView.Adapter<Adapter.NoteViewHolder> {
 
+
+    private onNoteClicked onNoteClicked;
+
     private SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd MM, HH:mm", Locale.getDefault());
 
     private ArrayList<Notes> data = new ArrayList<>();//передал коллекцию заметок ( источник данных - в метод getItemCount возвр источник скока заметок)
 
     public void setData(Collection<Notes> notes) { //добавление заметок
         data.addAll(notes);
+    }
+
+    public void setOnNoteClicked(Adapter.onNoteClicked onNoteClicked) {
+        this.onNoteClicked = onNoteClicked;
+    }
+
+    public Adapter.onNoteClicked getOnNoteClicked() {
+        return onNoteClicked;
+    }
+
+    // завел интерфейс с методом обработки нажатия на заметку
+    interface onNoteClicked{
+        void onNoteClicked(Notes notes);
     }
 
 
@@ -73,6 +89,18 @@ public class Adapter extends RecyclerView.Adapter<Adapter.NoteViewHolder> {
             title = itemView.findViewById(R.id.title_note);
             message = itemView.findViewById(R.id.message_note);
             date = itemView.findViewById(R.id.date_note);
+
+            itemView.findViewById(R.id.card_view).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    //если произошло нажатие и нам есть кому сообщить(заметка есть)
+                    if(onNoteClicked != null){
+                        int ClickedPosition = getAdapterPosition();//спрашиваю на какой позиции ты находишься?
+                        onNoteClicked.onNoteClicked(data.get(ClickedPosition));//возвращаем на позицию заметку
+
+                    }
+                }
+            });
 
 
         }

@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.hfad.myhomenotes.R;
 
@@ -23,7 +24,6 @@ import domain.Notes;
 
 
 public class NotesRecyclerView extends Fragment {
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -42,6 +42,13 @@ public class NotesRecyclerView extends Fragment {
         notesList.setLayoutManager(layoutManager);
 
         Adapter adapter = new Adapter();
+//todo - в конце всего добавил из адаптера этот метод нажатия на заметку (аналог setOnClickListener )
+        adapter.setOnNoteClicked(new Adapter.onNoteClicked() {
+            @Override
+            public void onNoteClicked(Notes notes) {
+                Toast.makeText(requireContext(), notes.getTitle(), Toast.LENGTH_SHORT).show();
+            }
+        });
 
         notesList.setAdapter(adapter);
 

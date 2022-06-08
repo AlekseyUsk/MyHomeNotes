@@ -1,11 +1,10 @@
 package uiCity;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.hfad.myhomenotes.R;
 
@@ -26,7 +25,6 @@ public class CityDetailsActivity extends AppCompatActivity {
 
     }
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,11 +34,11 @@ public class CityDetailsActivity extends AppCompatActivity {
 
             City city = getIntent().getParcelableExtra(EXTRA_CITY);  // если самое первое открытие вытаскиваем город
 
-            CityDetailsFragment cityDetailsFragment = CityDetailsFragment.newInstance(city);
+            DetailsCityFragment detailsCityFragment = DetailsCityFragment.newInstance(city);
 
             getSupportFragmentManager()
                     .beginTransaction()
-                    //.replace(R.id.container_activity_city_details, cityDetailsFragment)//? подчеркнуто крассным недобавляется фрагмент в контейнер активити
+                    .replace(R.id.container_activity_city_details, detailsCityFragment)
                     .commit();
         }
     }

@@ -2,8 +2,7 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/purple_200">
+    android:layout_height="match_parent">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -14,8 +13,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            app:titleTextAppearance="@style/TextAppearance.MaterialComponents.Headline4"
-            app:title="@string/Cites" />
+            app:title="@string/Cites"
+            app:titleTextAppearance="@style/TextAppearance.MaterialComponents.Headline4" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -28,6 +27,7 @@
             android:id="@+id/container_cities_list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
             android:orientation="vertical" />
 
 
